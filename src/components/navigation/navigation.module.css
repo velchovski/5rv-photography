@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  padding: 20px 20px;
+  gap: 25px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logoImg > img {
+  height: 50px;
+  display: block;
+}
+.logoText {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navItems {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

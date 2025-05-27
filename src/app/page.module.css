@@ -1,0 +1,18 @@
+.page {
+  flex-direction: column;
+  position: relative;
+  padding-top: 90px;
+}
+
+.navigationWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+  background: white;
+}
+
+.contentWrap {
+  
+}
