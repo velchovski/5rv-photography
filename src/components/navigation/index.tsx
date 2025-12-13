@@ -15,7 +15,7 @@ export default function Navigation() {
         </Link>
       </div>
       <div className={styles.navItems}>
-        <Link href="/projects" className={styles.menuItem}>Портфолио</Link>
+        <Link href="/work" className={styles.menuItem}>Моята работа</Link>
         <Link href="/about" className={styles.menuItem}>За мен</Link>
         <Link href="/contact" className={styles.menuItem}>Контакти</Link>
       </div>

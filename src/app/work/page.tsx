@@ -1,44 +1,44 @@
+import Link from 'next/link';
 import Page from '@/components/page';
+import styles from './work.module.css';
 
-import styles from './projects.module.css';
-
-export default function Projects() {
+export default function Work() {
   return (
     <Page>
       <section className={`${styles.project} ${styles.alignLeft}`}>
         <div className={styles.projectSummary}>
           <div className={styles.title}>Градски Изгледи и Архитектура</div>
-          <div className={styles.link}>Разгледай Галерия</div>
+          <Link href="/work/category/cityscapes" className={styles.link}>Разгледай Галерия</Link>
         </div>
         <div className={styles.projectCoverImage}>
-          <img src="/projects-cityscapes.jpg" />
+          <img src="/work-cityscapes.jpg" />
         </div>
       </section>
       <section className={`${styles.project} ${styles.alignRight}`}>
         <div className={styles.projectSummary}>
           <div className={styles.title}>Пейзажи</div>
-          <div className={styles.link}>Разгледай Галерия</div>
+          <Link href="/work/category/landscapes" className={styles.link}>Разгледай Галерия</Link>
         </div>
         <div className={styles.projectCoverImage}>
-          <img src="/projects-landscapes.jpg" />
+          <img src="/work-landscapes.jpg" />
         </div>
       </section>
       <section className={`${styles.project} ${styles.alignLeft}`}>
         <div className={styles.projectSummary}>
           <div className={styles.title}>Концептуални</div>
-          <div className={styles.link}>Разгледай Галерия</div>
+          <Link href="/work/category/conceptual" className={styles.link}>Разгледай Галерия</Link>
         </div>
         <div className={styles.projectCoverImage}>
-          <img src="/projects-concept.jpg" />
+          <img src="/work-concept.jpg" />
         </div>
       </section>
       <section className={`${styles.project} ${styles.alignRight}`}>
         <div className={styles.projectSummary}>
           <div className={styles.title}>Небе</div>
-          <div className={styles.link}>Разгледай Галерия</div>
+          <Link href="/work/category/sky" className={styles.link}>Разгледай Галерия</Link>
         </div>
         <div className={styles.projectCoverImage}>
-          <img src="/projects-sky.jpg" />
+          <img src="/work-sky.jpg" />
         </div>
       </section>
     </Page>

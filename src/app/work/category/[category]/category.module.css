@@ -1,0 +1,16 @@
+.categorySummary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 15px;
+  background: rgba(0,0,0,0.1);
+}
+
+.categorySummary h1 {
+  display: flex;
+  font-size: 20px;
+}
+.categorySummary p {
+  font-size: 16px;
+}
