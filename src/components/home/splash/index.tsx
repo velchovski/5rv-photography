@@ -1,11 +1,12 @@
 'use client';
 
 import {useEffect, useRef} from 'react';
+import {useTranslations} from 'next-intl';
 import styles from './splash.module.css';
-
 
 export default function Splash() {
 
+  const t = useTranslations('home.splash');
   const overlayRef = useRef<HTMLDivElement>(null);
   const quoteRef = useRef<HTMLDivElement>(null);
 
@@ -33,9 +34,7 @@ export default function Splash() {
       <div className={styles.homeOverlay} ref={overlayRef}></div>
       <div className={styles.homeQuote} ref={quoteRef}>
         <div className={styles.homeQuoteText}>
-          Photography is just capturing a moment<br/>
-          and keeping it both in the past and in the future.<br/>
-          I like finding moments worth keeping.
+          {t("quote")}
         </div>
       </div>
       <div className={styles.scrollInfo}>

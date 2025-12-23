@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+import { notFound } from 'next/navigation';
 import { Open_Sans } from "next/font/google";
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+
+import { routing } from '@/i18n/routing';
 
 import "@/styles/globals.css";
 
@@ -14,15 +18,22 @@ export const metadata: Metadata = {
   description: "Portfolio site of 5RV Photography, along with short information about the artist.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{locale: string}>;
 }>) {
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en">
+    <html>
       <body className={openSans.className}>
-        {children}
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

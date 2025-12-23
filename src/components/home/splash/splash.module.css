@@ -58,6 +58,7 @@
   font-weight: 300;
   opacity: 0.75;
   text-align: end;
+  white-space: pre-line;
 }
 
 /* Scroll Prompt Indidcator */
